@@ -33,10 +33,11 @@
             int temp = n;
             while (temp != 0)
             {
-                reverse = (reverse * 10) + (temp % 10);
-                temp = temp / 10;
+                //The next two lines remove the last digit in temp and puts it as the first digit in reverse.
+                reverse = (reverse * 10) + (temp % 10); //Using Integer Math the (reverse * 10) + (temp % 10) takes the last digit from temp and makes it the first number of reverse. 
+                temp = temp / 10; //Using integer math temp = temp / 10 removes the last digit in temp.
             }
-            return (reverse == n);
+            return (reverse == n); //Analyzes if reverse and n are the same. If so, true is returned. If not, false is returned.
 
         }
     }
